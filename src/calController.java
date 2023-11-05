@@ -46,7 +46,6 @@ public class calController {
 
             resulFinal.setText(s);
         } catch (Exception e) {
-            throw new Exception("Deu algum erro");
         }
     }
     
@@ -66,7 +65,6 @@ public class calController {
 
             resulFinal.setText(s);
         } catch (Exception e) {
-            throw new Exception("Deu algum erro");
         }
 
     }
@@ -86,7 +84,6 @@ public class calController {
 
             resulFinal.setText(s);
         } catch (Exception e) {
-            throw new Exception("Deu algum erro");
         }
     }
 
@@ -108,26 +105,23 @@ public class calController {
 
             resulFinal.setText(s);
         } catch (Exception e) {
-            throw new Exception("Deu algum erro");
         }
     }
 
     void verificaDados(TextField vl1, TextField vl2 )throws Exception{
         try {
-            int x = Integer.parseInt(vl1.getText());
-            int y = Integer.parseInt(vl2.getText());
+            Double x = Double.parseDouble(vl1.getText());
+            Double y = Double.parseDouble(vl2.getText());
         } catch (NumberFormatException e) {
             numberOne.setText(null);
             numberTwo.setText(null);
             resulFinal.setText(null);
             resulFinal.setText("Campo com texto");
-            throw new Exception("O valores nos campos não podem ser textos");
         } catch(NullPointerException e){
             numberOne.setText(null);
             numberTwo.setText(null);
             resulFinal.setText(null);
             resulFinal.setText("Campo vazio");
-            throw new Exception("O valores nos campos não podem ser vazios");
         }
     }
 
